@@ -32,6 +32,11 @@ button,
 textarea{
     border: 0;
 }
+
+ul{
+    list-style: none;
+}
+
 /*GERAIS */
 
 .font-zero{

@@ -1,9 +1,3 @@
-/* HEADER
-===========================*/
-.header{
-    border-top: 6px solid #2c3e50;
-}
-
 /*nav-toggle
 =================*/
 #nav-toggle{
@@ -50,9 +44,48 @@
     -webkit-transform: rotate(-45deg) translate3d(6px,-5px,0);
 }
 
+
+/* HEADER
+===========================*/
+.header{
+    border-top: 6px solid #2c3e50;
+}
+
+.header-logo{
+    width: 180px;
+    padding: 22px 0;
+    float: left;
+}
+
+.header-nav{
+    padding: 25px 0;
+    float: left;
+}
+
+.header-nav ul li{
+    display: inline-block;
+    margin: 0 3px;
+    position: relative;
+}
+
+.header-nav ul li a{
+    color: #2c3e50;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.875rem
+}
+.header-nav ul li a:hover{
+    color: #f47933
+}
+.header-nav ul li a.active{
+    color: #f47933
+}
+
 /* search */
 .header-search{
     position: relative;
+    float: right;
+    margin: 18px 0
 }
 
 .header-search input::-webkit-input-placeholder{
@@ -95,7 +128,7 @@
 /*BREAKPOINTS
 ==================*/
 /* MAX-WIDTH */
-@media(max-width: 960px){
+@media(max-width: 959.9px){
     #nav-toggle, .header-redes{
         display: block;
     }
@@ -105,13 +138,13 @@
     }
 
     .header-logo{
-        max-width: 180px;
-        width: 60%;
+        max-width: 60%;
         padding: 12px 0;
     }
 
     /* menu */
     .header-collapse{
+        overflow-y: auto;
         position: fixed;
         background: rgba(45,63,81,.95);
         width: 100%;
@@ -128,6 +161,11 @@
         top: 0%;
     }
 
+    .header-nav{
+        padding: 25px 0;
+        float: none;
+    }
+
     .header-nav ul li{
         width: 100%;
         text-align: center;
@@ -136,18 +174,67 @@
 
     .header-nav ul li a{
         color: #fff;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 1.375rem;
+        font-size: 1.4rem;
     }
 
     .header-search{
         max-width: 300px;
         margin: 0 auto;
+        float: none;
     }
     
     .header-search input{
        padding: 15px;
     }
     
+}
+
+/*BREAKPOINTS
+==================*/
+/* MIN-WIDTH */
+@media(min-width: 960px){
+    .header-nav{
+        margin-left: 2%;
+    }
+    .header-nav ul li a.active:before{
+        background: #f47933;
+        content: "";
+        position: absolute;
+        height: 6px;
+        width: 100%;
+        top: -33px;
+        left: 0;
+    }
+}
+@media(min-width:1024px){
+    .header-nav ul li{
+        margin: 0 7px;
+    }
+}
+
+@media(min-width: 1144px){
+    .header-logo{
+        width: auto;
+    }
+
+    .header-nav ul li a{
+        font-size: 1rem;
+    }
+
+    .header-nav ul li a.active:before{
+        top: -31px;
+    }
+}
+@media(min-width: 1280px){
+    .header-nav ul li a{
+        margin: 0 8px;
+    }
+
+    .header-search{
+        width: 260px;
+    }
+
+    .header-nav ul li a.active:before{
+        top: -31px;
+    }
 }
