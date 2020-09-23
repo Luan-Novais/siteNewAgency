@@ -48,6 +48,7 @@
 /* HEADER
 ===========================*/
 .header{
+    height: 80px;
     border-top: 6px solid #2c3e50;
 }
 
@@ -137,6 +138,10 @@
         height: 58px;
     }
 
+    #carousel_principal{
+        height: calc(100% - 58px);
+    }
+
     .header-logo{
         max-width: 60%;
         padding: 12px 0;
@@ -189,6 +194,7 @@
     
 }
 
+
 /*BREAKPOINTS
 ==================*/
 /* MIN-WIDTH */
@@ -206,6 +212,23 @@
         left: 0;
     }
 }
+
+@media(min-width: 768px){
+
+    #carousel_principal .owl-caption{
+        padding: 30px;
+        font-size: 1.6rem;
+    }
+
+
+    #carousel_principal .owl-caption strong{
+        font-size: 2.5rem;
+    }
+
+  
+}
+
+
 @media(min-width:1024px){
     .header-nav ul li{
         margin: 0 7px;
