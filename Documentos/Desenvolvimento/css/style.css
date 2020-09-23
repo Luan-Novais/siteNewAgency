@@ -86,7 +86,8 @@
 .header-search{
     position: relative;
     float: right;
-    margin: 18px 0
+    margin: 18px 0;
+    
 }
 
 .header-search input::-webkit-input-placeholder{
@@ -200,7 +201,7 @@
 /* MIN-WIDTH */
 @media(min-width: 960px){
     .header-nav{
-        margin-left: 2%;
+        margin-left: 0.5%;
     }
     .header-nav ul li a.active:before{
         background: #f47933;
