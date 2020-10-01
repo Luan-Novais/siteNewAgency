@@ -224,6 +224,7 @@
 
 .equipe-list{
     text-align: center;
+    font-size: 0;
 }
 
 .equipe-list li{
@@ -234,6 +235,7 @@
     max-width: 322px;
     display: inline-block;
     border: 1px solid #ccc;
+    border-top: 0;
 }
 
 .equipe-foto{
@@ -243,9 +245,9 @@
 
 .equipe-foto img{
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+    top: 75%;
+    transform: translateY(-75%);
+    -webkit-transform: translateY(-75%);
 
 }
 
@@ -356,6 +358,11 @@
     color: #fff;
 }
 
+/* .servicos{
+    background-image: url(../images/servicos-bg.jpg);
+} */
+
+
 /*BREAKPOINTS
 ==================*/
 /* MAX-WIDTH */
@@ -438,6 +445,16 @@
     }
 }
 
+@media(min-width: 667px){
+    .equipe-list li{
+        width: 50%;
+    }
+
+    .equipe-list li:nth-of-type(2n+0){
+        border-left: 0;
+    }
+}
+
 @media(min-width: 768px){
 
     #carousel_principal .owl-caption{
@@ -482,6 +499,7 @@
         left: 0;
     }
 
+
   
     .agencia-item:nth-of-type(2n+0),  
     .agencia-item
@@ -495,6 +513,15 @@
         margin-right: 0
     }
 
+    .equipe-list:nth-of-type(2n+0),
+    .equipe-list li{
+        width: 25%;
+    }
+
+    .equipe-list:not(:first-child){
+        border-left: 0;
+    }
+
 }
 
 
@@ -502,7 +529,7 @@
 
 @media(min-width:1024px){
     .header-nav ul li{
-        margin: 0 7px;
+        margin: 0 6px;
     }
 }
 
