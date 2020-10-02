@@ -357,6 +357,7 @@
     color: #fff;
 }
 
+
 /* SERVIÇOS
 ===================*/
 .servicos{
@@ -368,7 +369,6 @@
 }
 
 .servicos-item{
-    margin-top: 20px;
     background: #fff;
     text-align: center;
     border-radius: 5px;
@@ -377,8 +377,10 @@
     -webkit-box-shadow: 3px 3px 4px rgb(0,0,0, .3);
 }
 
+.servicos-item:not(:first-child){
+    margin-top: 30px;
+}
 .servicos-item header{
-    background: #e04646;
     padding: 15px;
 }
 
@@ -422,11 +424,56 @@
     font-size: 0.875rem;
     padding: 10px 20px;
     margin: 10px 0;
-    background: #e04646;
     color: #fff;
     text-transform: uppercase;
     border-radius: 5px;
     -webkit-border-radius: 5px;
+}
+
+/*Design
+==============*/
+.servicos-item.design header,
+.servicos-item.design  a{
+    background:#e04646;
+}
+
+.servicos-item.design i{
+    color: #e04646
+}
+
+
+/*Estrategia
+==============*/
+.servicos-item.estrategia header,
+.servicos-item.estrategia  a{
+    background:#0091cd;
+}
+
+.servicos-item.estrategia i{
+    color: #0091cd
+}
+
+/*Digital
+==============*/
+.servicos-item.digital header,
+.servicos-item.digital  a{
+    background:#00ad45;
+}
+
+.servicos-item.digital i{
+    color: #00ad45
+}
+
+/*Marketing
+==============*/
+
+.servicos-item.marketing header,
+.servicos-item.marketing a{
+    background:#eedb00;
+}
+
+.servicos-item.marketing i{
+    color: #eedb00;
 }
 
 .servicos-item a:hover{
@@ -523,6 +570,22 @@
     .equipe-list li:nth-of-type(2n+0){
         border-left: 0;
     }
+
+    .servicos-item:not(:first-child),
+    .servicos-item{
+        width: calc((100% - 4% )/2) ;
+        float: left;
+        margin: 0 4% 0 0;
+    }
+
+    .servicos-item:nth-of-type(2n+0){
+         margin-right: 0;
+    }
+
+    .servicos-item:nth-of-type(1n+3){
+        margin-top: 4%;
+   }
+        
 }
 
 @media(min-width: 768px){
@@ -628,5 +691,15 @@
 
     .header-nav ul li a.active:before{
         top: -31px;
+    }
+    .servicos-item:nth-of-type(2n+0),
+    .servicos-item:nth-of-type(1n+3),
+    .servicos-item{
+        width: calc((100% - 9%) / 4);
+        margin: 0 3% 0 0;
+    }
+
+    .servicos-item:nth-of-type(4n+0){
+        margin-right: 0;
     }
 }
